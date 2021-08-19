@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Direct Post Tester</title>
+<style type="text/css">
+dd { margin-left: 75px; }
+#mode_margin { margin-left: 0px; }
+</style>
+<script>
+function myFunction() {
+  alert("Your order is placed successfully!!");
+  open("home.html");
+}
+</script>
+</head>
+<body>
+<form>                       
+    <center><h1>Payment Process</h1></center> 
+   <a href="E:/ep project/collections.html"> <button>Back</button> </a><br><br>
+   <br>
+    <fieldset>
+    <div>
+            <h2>          
+                <input type=radio name=formOfPayment id=formOfPayment value=CreditCard />
+                    Pay by Credit Card</h2>             
+        </div>      
+        
+        <dt>Card Number</dt>
+        <dd>
+            <input type="text" id="cc_no" name="cc_no" value="" placeholder="Your Card Number"/>
+            <span id="err_cc_no" class="jserror"> </span>
+        </dd>            
+        <dt>Expiry Date</dt>
+        <dd>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><select id="cc_exp_mm" name="cc_exp_mm">
+                            <option value="" selected="selected">Month</option>
+                            <option value="1" >January</option>                                 
+                            <option value="2">February</option>                              
+                            <option value="3">March</option>                           
+                            <option value="4">April</option>                           
+                            <option value="5">May</option>                            
+                            <option value="6">June</option>                            
+                            <option value="7">July</option>                           
+                            <option value="8">August</option>                             
+                            <option value="9">September</option>                     
+                            <option value="10">October</option>                              
+                            <option value="11">November</option>                             
+                            <option value="12">December</option>                             
+                        </select></td>                         
+                    <td width="20">&nbsp;</td>                         
+                    <td><select id="cc_exp_yyyy" name="cc_exp_yyyy">
+<option value="" selected="selected">Year</option>
+                            <option value="2016" >2016</option>                                 
+                            <option value="2017">2017</option>                              
+                            <option value="2018">2018</option>                           
+                            <option value="2019">2019</option>                           
+                            <option value="2020">2020</option>                            
+                            <option value="2021">2021</option>                            
+                            <option value="2022">2022</option>                           
+                            <option value="2023">2023</option>                             
+                            <option value="2024">2024</option>                     
+                            <option value="2025">2025</option>                              
+                            <option value="2026">2026</option>                             
+                            <option value="2027">2027</option>
+<option value="2028">2028</option>                             
+                            <option value="2029">2029</option>
+<option value="2030">2030</option>
+                        </select>                         
+                    </td>                     
+                </tr>                 
+            </table>             
+        </dd>
+        <dt>Security Code</dt>
+        <dd>
+            <input id="cvv" type="text" size="5" name="cvv" placeholder="cvv">
+        </dd>
+        </dl>     
+</fieldset>     
+<fieldset >
+    <dl id="payMethodACH" >
+                <div class="Section_Header">                 
+            <h2>                     
+                <input type=radio name=formOfPayment id=formOfPayment value=ACH />                     
+                Pay by ACH</h2>             
+        </div>             
+        <dt>Routing Number</dt>
+
+        <dd>                 
+            <input type="text" id="bank_routing_num" name="bank_routing_num" value=""/>             
+        </dd>             
+        <dt>Account Number</dt>            
+        <dd>                 
+            <input type="text" id="bank_acct_num" name="bank_acct_num" value="" />             
+        </dd>         
+    </dl>              
+     <dl>             
+        <button onclick="myFunction()">submit</button>     
+    </dl>  
+</fieldset>      
+</form>
+</div>
+<footer>
+<script src="https://secure.ariasystems.net/api/ariaCHD.js"></script>
+<script language="javascript">
+          aria.environmentId ="future.stage";
+</script>
+</footer>
+</body>
+</html>
+</html>                                    

@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function myFunction() {
+              alert("Added to Cart Successfully!");
+            }
+            </script>
+        <script src="https://kit.fontawesome.com/621136387c.js" crossorigin="anonymous"></script>
+      <style>
+header {
+	height: 100px;
+	background: pink;
+	width: 100%;
+}
+.logo {
+	width: 30%;
+	float: left;
+    display: flex;
+    align-items: center;
+}
+nav {
+	float: right;
+	line-height: 100px;
+}
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	margin: 0 10px;
+	color: black;
+}
+nav a:hover{
+    color:  white;
+}
+
+           body{
+              
+               justify-content: center;
+               align-items: center;
+               background-color: #fff;
+           }
+           .container{
+               width: 750px;
+               height: 450px;
+               display: flex;
+               flex-direction: row;
+               box-shadow: 2px 4px 20px -6px rgba(0,0,0,0.5);
+               left: 30px;
+           }
+           .product-img{
+               background-image: url('./images/birth1.jpg');
+               background-position: center;
+               background-size: cover;
+               flex: 80%;
+           }
+           .product-desc{
+               flex: 70%;
+               padding: 20px;
+               text-align: left;
+               background-color: #353535;
+               color: #e0e0e0;
+               letter-spacing: 1.5px;
+           }
+           .product-desc h1{
+               font-size: 24px;
+               font-weight: 100;
+               line-height: 40px;
+           }
+           .product-desc h2{
+               font-size: 30px;
+               font-weight: 100;
+               line-height: 50px;
+           }
+           .product-desc p{
+               font-size: 13px;
+               font-weight: 100;
+               line-height: 20px;
+           }
+           .product-desc i{
+               color: #e0e0e0;
+               margin: 25px 0;
+           }
+           .product-desc button{
+               padding: 10px 15px;
+               box-sizing: border-box;
+               border: 1.5px solid #f2af00;
+               border-radius: 6px;
+               font-size: 14px;
+               font-weight: 500;
+               text-transform: uppercase;
+               letter-spacing: 0.2em;
+               color: #e0e0e0;
+               background-color: transparent;
+               cursor: pointer;
+               outline: none;
+               transition: 0.3s;
+
+           }
+           .product-desc button:hover{
+               background-color: #f2af00;
+           }
+       </style>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <img src='E:/ep project/images/32.png'>
+                </div>
+                <nav>
+                    <a href="afterlogin.html">Home</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="collections.html">Collections</a>
+                    <a href="services.html">Services</a>
+                    <a href="contactus.html">Contact Us</a>
+                    <a href="collections.html">Back</a>
+                    
+                        </div>
+                      </div>
+                </nav>
+            </div>
+        </header><br>
+        <div class="container">
+            <div class="product-img"></div>
+            <div class="product-desc">
+                <h1>
+                     Birthday Bouquet
+                </h1>
+                <h2>788/-</h2>
+                <p>It is an Exclusive one for your special ones.It is an imported germany bouquet..It also has different types of flowers with different smell</p>
+              <i class="fas fa-star"></i>  
+              <i class="fas fa-star"></i>  
+              <i class="fas fa-star-half-alt"></i>  
+              <i class="far fa-star"></i>  
+              <i class="far fa-star"></i> 
+             <a href="cart.html"><button onclick="myFunction()">Add to Cart</button> </a>
+            </div>
+        </div>
+    </body>
+</html>

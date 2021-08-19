@@ -1,0 +1,111 @@
+img{
+  background-size: cover;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.login{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(110%,-50%);
+    color: black;
+    -webkit-transform: translate(110%,-50%);
+    -moz-transform: translate(110%,-50%);
+    -ms-transform: translate(110%,-50%);
+    -o-transform: translate(110%,-50%);
+}
+.login h1{
+    float: left;
+    font-size:40px;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 17px;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-bottom: 1px solid black;
+}
+.textbox i
+{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+}
+.login .h1{
+    color: black;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); 
+    }
+}
+.signin{
+	cursor:pointer;
+    margin-bottom: 10px;
+        text-align: left;
+    float: right;
+    
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border: 2px solid black;
+}
+ul li a:hover{
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+}

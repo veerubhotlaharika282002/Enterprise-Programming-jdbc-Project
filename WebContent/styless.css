@@ -1,0 +1,64 @@
+.banner-image{ padding-top: 75px;    
+    padding-bottom: 50px; 
+    text-align: center;     
+    color: hotpink; 
+    background: url(ep-2.jpg) no-repeat center ; 
+    background-size: cover;
+}
+
+.banner-content{
+position:relative; 
+padding-top: 6%; 
+padding-bottom: 6%; 
+margin-top: 12%; 
+margin-bottom: 12%; 
+background-color: yellowgreen (0, 0, 0, 0.7); 
+max-width: 660px;
+overflow: hidden;
+
+}
+
+.thumbnail img{
+max-height: 150px; 
+}
+main {
+min-height: 100vh;
+}
+
+footer{
+padding: 10px 0; 
+background-color: blueviolet; 
+color:aqua; 
+bottom: 0; 
+width: 100%; }
+.row_style{margin-top: 70px;
+}
+h2{font-weight: bolder; 
+}
+.jumbotron_style{margin-top: 100px;
+    background-color: cornsilk;
+}
+.table_style{margin-top: 70px;
+    background-color: cornsilk;
+}
+h4{font-weight: bolder;
+}
+.container_style{margin-top: 80px;
+    background-color: cornsilk;
+}
+
+.add-to-cart {
+margin: 0;
+background-color: blueviolet;
+color:black;
+border: 1px solid cyan;
+border-radius: 4px;
+outline: none;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+}
+.padding-20 {
+padding: 20px;
+}

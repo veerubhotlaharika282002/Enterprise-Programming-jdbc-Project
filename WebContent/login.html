@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="signupcss.css">
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
+<meta name="google-signin-client_id" content="806280450098-ttj69t22bj7l18km9lnddv7h503uqdca.apps.googleusercontent.com">
+<script>
+function renderButton() {
+    gapi.signin2.render('gSignIn', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+    });
+}
+
+function onSuccess(googleUser) {
+    gapi.client.load('oauth2', 'v2', function () {
+        var request = gapi.client.oauth2.userinfo.get({
+            'userId': 'me'
+        });
+        request.execute(function (resp) {
+            var profileHTML = '<h3>Welcome '+resp.given_name+'! <a href="javascript:void(0);" onclick="signOut();">Sign out</a></h3>';
+            profileHTML += '<img src="'+resp.picture+'"/><p><b>Google ID: </b>'+resp.id+'</p><p><b>Name: </b>'+resp.name+'</p><p><b>Email: </b>'+resp.email+'</p><p><b>Gender: </b>'+resp.gender+'</p><p><b>Locale: </b>'+resp.locale+'</p><p><b>Google Profile:</b> <a target="_blank" href="'+resp.link+'">click to view profile</a></p>';
+            document.getElementsByClassName("userContent")[0].innerHTML = profileHTML;
+            
+            document.getElementById("gSignIn").style.display = "none";
+            document.getElementsByClassName("userContent")[0].style.display = "block";
+        });
+    });
+}
+function onFailure(error) {
+    alert(error);
+}
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        document.getElementsByClassName("userContent")[0].innerHTML = '';
+        document.getElementsByClassName("userContent")[0].style.display = "none";
+        document.getElementById("gSignIn").style.display = "block";
+    });
+    
+    auth2.disconnect();
+}
+</script>
+<script>
+            function validation()
+            {
+                var z= document.forms["myForm"]["uname"].value;
+                var i= document.forms["myForm"]["n3"].value;2
+                if (z == 0) {
+                    document.getElementById("utext").innerHTML="**UserName must not be empty";
+                    document.getElementById("utext").style.visibility="visible";
+                    document.getElementById("utext").style.color="red";  
+                }
+                if (z > 0) {
+                    document.getElementById("utext").innerHTML="**UserName is Valid";
+                    document.getElementById("utext").style.visibility="visible";
+                    document.getElementById("utext").style.color="green";
+                }
+                if (i == 0) {
+                    document.getElementById("ptext").innerHTML="**Password must not be empty";
+                    document.getElementById("ptext").style.visibility="visible";
+                    document.getElementById("ptext").style.color="red";
+                }
+                if (i > 0) {
+                    document.getElementById("ptext").innerHTML="**Password is Valid";
+                    document.getElementById("ptext").style.visibility="visible";
+                    document.getElementById("ptext").style.color="green";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+        <img src="E:\4th semester\4thsem project\images\f.jpg" height="100%" width="100%">
+        <div class="contain1">
+             <div id="gSignIn" class="signin"></div>
+         <div class="userContent" style="display: none;"></div>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">Why FreshFlorets</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Register</a></li>
+        </ul>
+        <div class="login">
+            <h1>Login</h1>
+            <form onsubmit="return validation()" action="./MyServlet2" method="post" name="myForm" id="myForm">
+                <div id="error"></div>
+                <div class="textbox">
+                    <label id="utext" style="color: red" for="uname"></label>
+                    <input type="text" placeholder="UserName" name="uname" value="" autocomplete="off" id="name">
+                </div>
+                <div class="textbox">
+                    <label id="ptext" style="color: red"></label>
+                    <input type="password" placeholder="Password" id="password" name="n3" value="" autocomplete="off">
+                </div>
+            <div class="top">
+            <p>
+               ----or----<br>
+                New Here:
+                <a href="signup.html" >SIGN UP</a><br></p>
+            <a href="#">Forgot Passoword?</a>
+        </div>
+            <input class="btn" type="submit" name="" value="LogIn">
+        </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+   <link rel="stylesheet" href="signupcss.css"> 
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+   <script>
+            function validateForm() 
+            {
+            	var x = document.forms["myForm"]["fname"].value;
+                var y = document.forms["myForm"]["lname"].value;
+                var z= document.forms["myForm"]["uname"].value;
+                var i= document.forms["myForm"]["n3"].value;
+                var text = document.getElementById("text1").value;
+                var regx = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+                if(regx.test(text))
+                {
+                    document.getElementById("lbltext").innerHTML="**Email is Valid";
+                    document.getElementById("lbltext").style.visibility="visible";
+                    document.getElementById("lbltext").style.color="green";
+                }
+                else
+                {
+                    document.getElementById("lbltext").innerHTML="**Email is InValid";
+                    document.getElementById("lbltext").style.visibility="visible";
+                    document.getElementById("lbltext").style.color="red";
+                }
+                if (x <= 0 ) {
+                    document.getElementById("ftext").innerHTML="**First Name must not be empty";
+                    document.getElementById("ftext").style.visibility="visible";
+                    document.getElementById("ftext").style.color="red";
+                }
+                if (y <= 0) {
+                    document.getElementById("ltext").innerHTML="**Last Name must not be empty";
+                    document.getElementById("ltext").style.visibility="visible";
+                    document.getElementById("ltext").style.color="red";
+                }
+                if (z <= 0) {
+                    document.getElementById("utext").innerHTML="**UserName must not be empty";
+                    document.getElementById("utext").style.visibility="visible";
+                    document.getElementById("utext").style.color="red";
+                }
+                if (i <= 0 ) {
+                	document.getElementById("ptext").innerHTML="**password must not be empty";
+                	document.getElementById("ptext").style.visibility="visible";
+                	document.getElementById("ptext").style.color="red"
+                }
+              }    
+        </script> 
+</head>
+    <body>
+        <img src="E:\4th semester\4thsem project\images\fl.jpg" height="100%" width="100%">
+        <div class="elfsight-app-48649b8d-ef10-4fa6-bb8c-f2d1b2f4ea42"></div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">Why FreshFlorets</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Register</a></li>
+        </ul>
+        <div class="login">
+            <h1>Register Now</h1>
+            <form name="myForm" action="./MyServlet1" method="post" onsubmit="return validateForm()" autocomplete="off">
+            <div class="textbox">
+                <label id="ftext" for="fname"></label>
+                <input type="text" placeholder="FirstName" name="fname" value="" required>
+            </div>
+            <div class="textbox">
+                <label id="ltext" style="color: red" for="lname"></label>
+                <input type="text" placeholder="LastName" name="lname" value="" required>
+            </div>
+            <div class="textbox">
+                <label id="utext" style="color: red" for="uname"></label>
+                <input type="text" placeholder="UserName" name="uname" value="" required>
+            </div>
+            <div class="textbox">
+                <label id="lbltext" style="color: red"></label>
+                <input type="text" placeholder="Email-abc@example.com" id="text1" name="n2"  value="" required>
+            </div>
+            <div class="textbox">
+                <label id="ptext" style="color: red"></label>
+                <input type="password" id="h12" placeholder="Password" name="n3" value="" required>
+            </div>
+            <p id="text">WARNING! Caps lock is ON...</p>
+            <style>
+                #text {display:none;color:red}
+            </style>
+            <input class="btn" type="submit" value="Register">
+        </form>
+        </div>
+        </body>
+</html>
